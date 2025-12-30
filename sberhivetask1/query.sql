@@ -1,6 +1,6 @@
-ADD JAR /opt/cloudera/parcels/CDH/lib/hive/lib/hive-contrib.jar;
+--ADD JAR /opt/cloudera/parcels/CDH/lib/hive/lib/hive-contrib.jar;
 
-ADD JAR /opt/cloudera/parcels/CDH/lib/hive/lib/hive-serde.jar;
+--ADD JAR /opt/cloudera/parcels/CDH/lib/hive/lib/hive-serde.jar;
 
 SET hive.exec.dynamic.partition=true;
 SET hive.exec.dynamic.partition.mode=nonstrict;
