@@ -1,3 +1,7 @@
+ADD JAR /opt/cloudera/parcels/CDH/lib/hive/lib/hive-contrib.jar;
+
+ADD JAR /opt/cloudera/parcels/CDH/lib/hive/lib/hive-serde.jar;
+
 USE chupahinar;
 
 --создание промежуточной Logs
