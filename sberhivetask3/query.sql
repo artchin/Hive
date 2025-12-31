@@ -1,5 +1,7 @@
 USE chupahinar;
 
+SET hive.auto.convert.join = false;
+
 SELECT 
     i.region,
     SUM(IF(u.sex = 'male', 1, 0)) AS male,
