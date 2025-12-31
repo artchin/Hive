@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-hive -f query.sql
+hive -S -f query.sql
