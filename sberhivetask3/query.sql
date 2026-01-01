@@ -3,6 +3,7 @@ USE chupahinar;
 set hive.exec.parallel=True;
 set hive.exec.parallel.thread.number=8;
 set hive.auto.convert.join = False;
+set mapreduce.job.reduces=82;
 
 SELECT 
     i.region,
