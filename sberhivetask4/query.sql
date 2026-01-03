@@ -1,7 +1,7 @@
 use chupahinar;
 
-SELECT TRANSFORM (ip, url, size, code, browser, date_time)
+SELECT TRANSFORM (ip, url, response_size, url_code, client_app, date_time)
 USING 'sed "s/\.ru\//.com\//"'
-AS (ip, url, size, code, browser, date_time)
+AS (ip, url, response_size, url_code, client_app, date_time)
 from logs 
 limit 10;
