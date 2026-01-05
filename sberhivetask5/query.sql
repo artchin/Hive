@@ -5,7 +5,7 @@ set hive.exec.parallel.thread.number=8;
 set mapreduce.job.reduces=30;
 
 
--all
+--all
 SELECT 
     i.region,
     SUM(IF(u.sex = 'male', 1, 0)) AS male,
@@ -20,7 +20,7 @@ SELECT
     i.region,
     SUM(IF(u.sex = 'male', 1, 0)) AS male,
     SUM(IF(u.sex = 'female', 1, 0)) AS female
-FROM logs l TABLESAMPLE (1000 ROWS) l
+FROM logs TABLESAMPLE (1000 ROWS) l
 JOIN ipregions i ON i.ip = l.ip
 JOIN users u ON u.ip = l.ip
 GROUP BY i.region;
@@ -30,7 +30,7 @@ SELECT
     i.region,
     SUM(IF(u.sex = 'male', 1, 0)) AS male,
     SUM(IF(u.sex = 'female', 1, 0)) AS female
-FROM logs l TABLESAMPLE (10000 ROWS) l
+FROM logs TABLESAMPLE (10000 ROWS) l
 JOIN ipregions i ON i.ip = l.ip
 JOIN users u ON u.ip = l.ip
 GROUP BY i.region;
